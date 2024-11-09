@@ -1,0 +1,53 @@
+databaseChangeLog:
+  - include:
+      file: classpath:/db/changelog/db.changelog-master.yaml
+  - changeSet:
+      runOrder: "last"
+      id: "test"
+      author: "MeMySelfAndI"
+      changes:
+        - insert:
+            tableName: customer
+            columns:
+              - column:
+                  name: name
+                  value: Customer 1
+              - column:
+                  name: email
+                  value: customer1@example.com
+        - insert:
+            tableName: customer
+            columns:
+              - column:
+                  name: name
+                  value: Customer 2
+              - column:
+                  name: email
+                  value: customer2@example.com
+        - insert:
+            tableName: customer
+            columns:
+              - column:
+                  name: name
+                  value: Customer 3
+              - column:
+                  name: email
+                  value: customer3@example.com
+        - insert:
+            tableName: customer
+            columns:
+              - column:
+                  name: name
+                  value: Customer 4
+              - column:
+                  name: email
+                  value: customer4@example.com
+        - insert:
+            tableName: customer
+            columns:
+              - column:
+                  name: name
+                  value: Customer 5
+              - column:
+                  name: email
+                  value: customer5@example.com
