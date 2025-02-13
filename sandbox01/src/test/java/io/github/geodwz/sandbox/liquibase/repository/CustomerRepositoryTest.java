@@ -14,7 +14,7 @@ import static org.assertj.core.api.AssertionsForClassTypes.assertThat;
 @SpringBootTest
 class CustomerRepositoryTest {
     @Autowired
-    private UserRepository userRepository;
+    private CustomerRepository customerRepository;
 
     @Test
     void testFindByEmail() {
@@ -22,10 +22,10 @@ class CustomerRepositoryTest {
         Customer customer = new Customer();
         customer.setName("John Doe");
         customer.setEmail("john@example.com");
-        userRepository.save(customer);
+        customerRepository.save(customer);
 
         // When
-        Customer foundCustomer = userRepository.findByEmail("john@example.com");
+        Customer foundCustomer = customerRepository.findByEmail("john@example.com");
 
 
         // Then
@@ -39,7 +39,7 @@ class CustomerRepositoryTest {
         String email = "customer4@example.com";
 
         // When
-        Customer foundCustomer = userRepository.findByEmail(email);
+        Customer foundCustomer = customerRepository.findByEmail(email);
 
         // Then
         assertThat(foundCustomer).isNotNull();
