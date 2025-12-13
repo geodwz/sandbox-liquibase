@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+                        http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-4.3.xsd">
+
+    <changeSet id="002-1" author="you">
+        <createTable tableName="habitats">
+            <column name="id" type="bigint" autoIncrement="true">
+                <constraints primaryKey="true" nullable="false"/>
+            </column>
+            <column name="name" type="varchar(100)">
+                <constraints nullable="false" unique="true"/>
+            </column>
+            <column name="description" type="text">
+                <constraints nullable="false"/>
+            </column>
+        </createTable>
+    </changeSet>
+
+    <changeSet id="002-2" author="you">
+        <insert tableName="habitats">
+            <column name="name" value="Savanna"/>
+            <column name="description" value="A mixed woodland-grassland ecosystem characterized by trees widely spaced so that the canopy does not close."/>
+        </insert>
+        <rollback>
+            DELETE FROM habitats WHERE name = 'Savanna';
+        </rollback>
+    </changeSet>
+
+    <changeSet id="002-3" author="you">
+        <insert tableName="habitats">
+            <column name="name" value="Tropical Rainforest"/>
+            <column name="description" value="A forest characterized by high rainfall, with annual rainfall in the case of tropical rainforests between 250 and 450 centimetres."/>
+        </insert>
+        <rollback>
+            DELETE FROM habitats WHERE name = 'Tropical Rainforest';
+        </rollback>
+    </changeSet>
+</databaseChangeLog>
