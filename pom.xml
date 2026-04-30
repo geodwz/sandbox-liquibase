@@ -4,7 +4,7 @@
     <modelVersion>4.0.0</modelVersion>
     <groupId>io.github.geodwz</groupId>
     <artifactId>sandbox-liquibase</artifactId>
-    <version>0.0.2-SNAPSHOT</version>
+    <version>0.0.3-SNAPSHOT</version>
     <name>sandbox-liquibase</name>
     <packaging>pom</packaging>
     <description>Sandbox project using Spring Boot, liquibase and testcontainer</description>

@@ -5,12 +5,12 @@
     <parent>
         <groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot-starter-parent</artifactId>
-        <version>4.0.2</version>
+        <version>4.0.6</version>
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
     <groupId>io.github.geodwz.sandbox.liquibase</groupId>
     <artifactId>sandbox02</artifactId>
-    <version>0.0.1-SNAPSHOT</version>
+    <version>0.0.2-SNAPSHOT</version>
     <name>sandbox02</name>
     <description>Sandbox project using Spring Boot, liquibase and testcontainer</description>
     <url/>
